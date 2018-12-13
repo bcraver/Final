@@ -440,7 +440,8 @@ Temporary Items
 ## Project Specific Files
 
 data/*
-data/raw/*.fastq
+data/raw/*.gz
+data/processed/unzipped/*.fastq
 data/processed/*.fastq
 data/processed/fastqc_check/*.fastq
 code/analysis/imported_data.qza

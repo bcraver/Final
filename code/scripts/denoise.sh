@@ -12,8 +12,8 @@
 #
 
 
-module load anaconda/2.7-4.3.1
-source activate qiime2-2018.4
+module load anaconda/3.6-4.3.1
+source activate qiime2-2018.11
 
 
 qiime dada2 denoise-paired \

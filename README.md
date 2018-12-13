@@ -11,9 +11,11 @@ jje/kent/2014.02.19 perl/5.26.1 jje/jjeutils/0.1a R/2.15.2 rstudio/0.98.501 fast
 `for f in /bio/aoliver2/MISC/kenza/raw_data/*; do cp "$f" /pub/bcraver/EE282_final/
 ; done`
 
+Saved a copy of raw data in JJ's public ee282 file.   
+
 `for f in /bio/aoliver2/MISC/kenza/raw_data/*; do cp "$f" /pub/jje/ee282/bcraver/Final/data/raw/; done`
 
-# initialize git
+### initialize git
 	repodir=/pub/bcraver/EE282_final; 	projname=EE282_final
 	cd /pub/bcraver/EE282_final
 	git init
@@ -28,27 +30,25 @@ jje/kent/2014.02.19 perl/5.26.1 jje/jjeutils/0.1a R/2.15.2 rstudio/0.98.501 fast
 	git add .
 	git commit -m "First commit."
 	
-git remote set-url origin ssh://git@github.com/bcraver/Final.git
 
-1 files changed, 13 insertions(+), 0 deletions(-)
- create mode 100755 code/scripts/fastqc.sh
-
-##Pre-processing  
+#Pre-processing and quality check  
 Document checksums for raw zipped file.
 
-`md5sum forward.fastq.gz` 
+`md5sum forward.fastq.gz`   
 cbd37f4d46605042f6a361065d4ef9a8  forward.fastq.gz  
 `md5sum forward.fastq.gz`  
 cbd37f4d46605042f6a361065d4ef9a8  forward.fastq.gz  	
 
 Unzip the fastq files then document checksums
-`gunzip forward.fastq.gz reverse.fastq.gz` 
-`md5sum forward.fastq reverse.fastq barcodes.fastq`
+
+`gunzip forward.fastq.gz reverse.fastq.gz`   
+`md5sum forward.fastq reverse.fastq barcodes.fastq`  
+
 4b33b739055f6bfa8de7403a2c2156a9  forward.fastq  
 3313e9ab2ecedef6917fcbac1fac09b6  reverse.fastq  
 8ce415da99303fb91ad4a4a57089dd9c  barcodes.fastq
 	
-####fastqc.sh	
+####Running FastQC
 Here is a script to run FastQC on the raw data:
 
 	#!/bin/bash
@@ -66,8 +66,8 @@ Here is a script to run FastQC on the raw data:
 	
 Next, I downloaded the html files onto my local computer to view FasqQC Report:
 
-[FastQC Report forward](file:///Users/briannacraver/Downloads/forward_fastqc.html)  
-[FastQC Report reverse](file:///Users/briannacraver/Downloads/reverse_fastqc.html)  
+[FastQC Report forward](https://github.com/bcraver/Final/blob/master/data/processed/fastqc_check/forward_fastqc.html)  
+[FastQC Report reverse](https://github.com/bcraver/Final/blob/master/data/processed/fastqc_check/reverse_fastqc.html)
 
 
 
